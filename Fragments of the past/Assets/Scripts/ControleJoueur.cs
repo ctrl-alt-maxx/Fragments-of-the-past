@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class ControleRobin : MonoBehaviour
+public class ControleJoueur : MonoBehaviour
 {
 
     private Animator AnimatorJoueur;
@@ -22,6 +22,8 @@ public class ControleRobin : MonoBehaviour
     private int _LastFrameCountFire = -1;
 
     private bool _PeutMarcher = true;
+
+    public List<CollectionnableEnum> _inventaire = new List<CollectionnableEnum>();
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +74,15 @@ public class ControleRobin : MonoBehaviour
     public void Stop()
     {
         _PeutMarcher = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 8)//TODO changer le 8 par le filter mask de Collectionnable
+        {
+            _inventaire.Add(collision.gameObject.GetComponent<Collectionnable>().type);
+            collision.gameObject.SetActive(false);
+        }
     }
 
 }
