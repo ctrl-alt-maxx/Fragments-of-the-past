@@ -4,3 +4,9 @@ defi 3 : Libérer le passage de boites et d'objets : besoin d'un passage plus é
 defi 4 : Personnage a froid. Il sait exactement ce qu'il s'est passé avec nous. Il faut lui apporter une flamme : besoin d'une salle circulaire plus petite idéalement avec baril / substance
 
 Motion trail : trainée derrière lampe torche
+
+
+
+
+
+Change max size of a sprite to make it pixalized
