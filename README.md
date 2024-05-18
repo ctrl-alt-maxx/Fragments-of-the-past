@@ -5,7 +5,7 @@ defi 1 : Personnage a perdu un item important. Il faut le trouver et lui apporte
 defi 2 : Porte avec trois clés. Il faut toutes les trouver
 defi 3 : Libérer le passage de boites et d'objets : besoin d'un passage plus étroit
 defi 4 : Personnage a froid. Il sait exactement ce qu'il s'est passé avec nous. Il faut lui apporter une flamme : besoin d'une salle circulaire plus petite idéalement avec baril / substance
-Motion trail : trainée derrière lampe torche
+
 
 ## Notes Utiles
 Post Processing pour Vignette
@@ -21,9 +21,13 @@ Change max size of a sprite to make it pixalized
 - Vignette pour restraindre la vision du joueur (Aditionnel mais serait super utile)
 - pour les effets particule continu : 1 simulation de goute qui tombe | 2 ??? (Effet Particule Continu)
 - lvl 2 le NPC à fait un désordre
-- Motion trail : trainée derrière lampe torche 
 - Raycast NPC te regarde (raycast #1)
-- ??? (raycast #2)
+- Spawn de boite aléatoire (raycast #2)
+- trainée derrière lampe torche (Motion Trail #1)
+- trainée derrière la boite (Motion trail #2)
+- 1 player 2 boites 3 repulse boxes end scene 4 repulses other unknown object end scene (Objets bougé par code)
+- 1 clé apparaissent 2 Event qui se passe quand tu pick up key 3 unlock padlock collision event 4 trigger explosion and repulse objects around (évenements)
+
  
 
 ## Ce qui manque (Max)
