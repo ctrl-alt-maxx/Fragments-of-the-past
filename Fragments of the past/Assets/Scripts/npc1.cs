@@ -9,9 +9,6 @@ public class npc1 : MonoBehaviour
     private Transform _joueur;
 
     [SerializeField]
-    private float _distance;
-
-    [SerializeField]
     private CollectionnableEnum _objet;
 
     [Header("Gestion du texte")]
@@ -27,31 +24,48 @@ public class npc1 : MonoBehaviour
     [SerializeField]
     private Vector3 _offset;
 
+    private bool _isOnScreen = false;
+
     // Start is called before the first frame update
     void Start()
     {
         _textObject.GetComponent<TextMeshProUGUI>().text = _texteBase;
+        _textObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(_isOnScreen)
+        {
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+            _textObject.transform.position = screenPosition + _offset;
+            if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
+            {
+                _textObject.GetComponent<TextMeshProUGUI>().text = _texteFound;
+            }
+            _textObject.SetActive(true);
+        }
+        else
+        {
+            _textObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        _textObject.transform.position = screenPosition + _offset;
-        if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
+        if(collision.gameObject.layer == 6)
         {
-            _textObject.GetComponent<TextMeshProUGUI>().text = _texteFound;
+           _isOnScreen = true;
         }
-        _textObject.SetActive(true);
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _textObject.SetActive(false);
+        if (collision.gameObject.layer == 6)
+        {
+            _isOnScreen= false;
+        }
     }
 }
