@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class ControleJoueur : MonoBehaviour
@@ -88,6 +89,11 @@ public class ControleJoueur : MonoBehaviour
     public List<CollectionnableEnum> getType()
     {
         return _inventaire;
+    }
+
+    public void changerNiveau()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
