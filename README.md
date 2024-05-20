@@ -36,7 +36,7 @@ Change max size of a sprite to make it pixalized
 - objet poussé par le joueur (verre) [X]
 - repulse  niveau 3 (explosion) event manager [X]
 - NPC RayCast [X]
-- Vignette []
+- Vignette [X]
 - Motion Trail lampe torche[]
 
 ## Isidore
