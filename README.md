@@ -19,15 +19,17 @@ Change max size of a sprite to make it pixalized
 - UI ??? à TROUVER ??? (Indicateur UI #2)
 - pour les deux effets particule explosions : 1 un petit flash quand la porte se débarre | 2 Explosions dans niveau final (Effet Particule Explosions)
 - Vignette pour restraindre la vision du joueur (Aditionnel mais serait super utile)
-- pour les effets particule continu : 1 simulation de goute qui tombe | 2 ??? (Effet Particule Continu)
+- pour les effets particule continu : 1 simulation de goute qui tombe | 2 ??? | 3 ??? | 4 ??? (Effet Particule Continu)
 - lvl 2 le NPC à fait un désordre
 - Raycast NPC te regarde (raycast #1)
-- Spawn de boite aléatoire (raycast #2)
+- Chat (raycast #2)
 - trainée derrière lampe torche (Motion Trail #1)
 - trainée derrière la boite (Motion trail #2)
 - 1 player 2 boites 3 repulse boxes end scene 4 repulses other unknown object end scene (Objets bougé par code)
 - 1 clé apparaissent 2 Event qui se passe quand tu pick up key 3 unlock padlock collision event 4 trigger explosion and repulse objects around (évenements)
-
+- 1 rough  2 ??? (Matériels physique)
+- 1 boite 2 ??? (objet qui peut etre pousser)
+ 
  
 
 ## Ce qui manque (Max)
