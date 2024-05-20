@@ -85,6 +85,11 @@ public class ControleJoueur : MonoBehaviour
         }
     }
 
+    public List<CollectionnableEnum> getType()
+    {
+        return _inventaire;
+    }
+
 }
 
 
