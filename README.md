@@ -33,11 +33,11 @@ Change max size of a sprite to make it pixalized
  
 
 ## Ce qui manque (Max)
-- objet poussé par le joueur (verre)
-- repulse  niveau 3 (explosion) event manager
-- NPC RayCast 
-- Vignette 
-- Motion Trail lampe torche
+- objet poussé par le joueur (verre) [X]
+- repulse  niveau 3 (explosion) event manager []
+- NPC RayCast [X]
+- Vignette []
+- Motion Trail lampe torche[]
 
 ## Isidore
 - FONDU MENU PRINCIPAL
