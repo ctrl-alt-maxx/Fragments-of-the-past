@@ -42,6 +42,7 @@ public class npc1 : MonoBehaviour
             _textObject.transform.position = screenPosition + _offset;
             if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
             {
+                EventManager.TriggerEvent(EventManager.PossibleEvent.eAfficher, this.transform.position);
                 _textObject.GetComponent<TextMeshProUGUI>().text = _texteFound;
             }
             _textObject.SetActive(true);

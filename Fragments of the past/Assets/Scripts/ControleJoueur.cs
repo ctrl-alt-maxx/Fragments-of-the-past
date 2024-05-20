@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class ControleJoueur : MonoBehaviour
@@ -83,6 +84,16 @@ public class ControleJoueur : MonoBehaviour
             _inventaire.Add(collision.gameObject.GetComponent<Collectionnable>().type);
             collision.gameObject.SetActive(false);
         }
+    }
+
+    public List<CollectionnableEnum> getType()
+    {
+        return _inventaire;
+    }
+
+    public void changerNiveau()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
