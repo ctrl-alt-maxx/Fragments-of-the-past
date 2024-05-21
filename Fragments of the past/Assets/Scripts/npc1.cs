@@ -19,10 +19,20 @@ public class npc1 : MonoBehaviour
     private string _texteFound;
 
     [SerializeField]
+    private string _texteAction;
+
+    [SerializeField]
+    private string _texteAction2;
+
+    [SerializeField]
     private GameObject _textObject;
 
     [SerializeField]
+    private GameObject _textObjectAction;
+
+    [SerializeField]
     private Vector3 _offset;
+
 
     private bool _isOnScreen = false;
 
@@ -31,6 +41,8 @@ public class npc1 : MonoBehaviour
     {
         _textObject.GetComponent<TextMeshProUGUI>().text = _texteBase;
         _textObject.SetActive(false);
+        _textObjectAction.GetComponent<TextMeshProUGUI>().text = _texteAction;
+        _textObjectAction.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,15 +54,15 @@ public class npc1 : MonoBehaviour
             _textObject.transform.position = screenPosition + _offset;
             if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
             {
+                _joueur.GetComponent<ControleJoueur>()._inventaire.Remove(_objet);
                 EventManager.TriggerEvent(EventManager.PossibleEvent.eAfficher, this.transform.position);
                 _textObject.GetComponent<TextMeshProUGUI>().text = _texteFound;
+                _textObjectAction.GetComponent<TextMeshProUGUI>().text = _texteAction2;
             }
-            _textObject.SetActive(true);
+            _textObjectAction.SetActive(true);
         }
-        else
-        {
-            _textObject.SetActive(false);
-        }
+        _textObject.SetActive(_isOnScreen);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -15,33 +15,21 @@ Change max size of a sprite to make it pixalized
 ## Idées et Critères
 () = Critères
 
-- En UI il faut montrer l'inventaire : pour les clés / objets qu'on collectionnent (Indicateur UI #1)
-- UI Action a faire (Indicateur UI #2)
-- pour les deux effets particule explosions : 1 un petit flash quand la porte se débarre | 2 Explosions dans niveau final (Effet Particule Explosions)
-- Vignette pour restraindre la vision du joueur (Aditionnel mais serait super utile)
-- pour les effets particule continu :| 3 ??? | 4 ??? (Effet Particule Continu)
-- lvl 2 le NPC à fait un désordre
-- Raycast NPC te regarde (raycast #1)
-
-- trainée derrière lampe torche (Motion Trail #1)
-- trainée derrière la boite (Motion trail #2)
-- #4 repulse objets last scene (Objets bougé par code)
-- 1 clé apparaissent 2 Event qui se passe quand tu pick up key 3 Chat NPC 4 trigger explosion and repulse objects around (évenements)
-- 1 rough  2 bounce pluie (Matériels physique)
-- 1 boite 2 verre (objet qui peut etre pousser)
  
  
 
 ## Ce qui manque (Max)
-- objet poussé par le joueur (verre) [X]
-- repulse  niveau 3 (explosion) event manager [X]
-- NPC RayCast [X]
-- Vignette [X]
 - Motion Trail lampe torche[]
+- Fin (En appuyant sur q)
 
 ## Isidore
 - FONDU MENU PRINCIPAL
 - note: lighter icon in assets (Nature 2D Graphics)
+- coroutines particules menu principal
+- 1 un petit flash quand la porte se débarre 
+- pour les effets particule continu :| 3 ??? | 4 ??? (Effet Particule Continu)
+- 2 Event qui se passe quand tu pick up key 3 Chat NPC 
+- 1 rough 2 bounce pluie (Matériels physique)
 
 ## PRENDRE RENDEZ VOUS 
 voir mio du prof à parament il y a un lien.

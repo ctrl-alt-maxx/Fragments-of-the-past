@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum CollectionnableEnum
 {
-    ObjetPerdu,
-    Cle1,
-    Cle2,
-    Cle3
+    Chat_perdu,
+    Cle_argent,
+    Cle_bronze,
+    Cle_or
 }
 
 public class Collectionnable : MonoBehaviour
