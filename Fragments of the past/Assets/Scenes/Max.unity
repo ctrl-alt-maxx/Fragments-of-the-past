@@ -150,11 +150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7033791204638002127, guid: 22664361a3a205f40a4b488625799754, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9
+      value: -3.43
       objectReference: {fileID: 0}
     - target: {fileID: 7033791204638002127, guid: 22664361a3a205f40a4b488625799754, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 7033791204638002127, guid: 22664361a3a205f40a4b488625799754, type: 3}
       propertyPath: m_LocalPosition.z
@@ -280,7 +280,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.20454772
+        value: 0.1573065
         inSlope: -0.18991427
         outSlope: -0.18991427
         tangentMode: 0
