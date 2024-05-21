@@ -26,7 +26,6 @@ Change max size of a sprite to make it pixalized
 - FONDU MENU PRINCIPAL
 - note: lighter icon in assets (Nature 2D Graphics)
 - coroutines particules menu principal
-- pour les effets particule continu :| 3 ??? | 4 ??? (Effet Particule Continu)
 - 2 Event qui se passe quand tu pick up key 3 Chat NPC 
 - 1 rough 2 bounce pluie (Matériels physique)
 
