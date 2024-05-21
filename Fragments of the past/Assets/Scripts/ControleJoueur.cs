@@ -83,10 +83,14 @@ public class ControleJoueur : MonoBehaviour
         {
             _inventaire.Add(collision.gameObject.GetComponent<Collectionnable>().type);
             collision.gameObject.SetActive(false);
+            if(collision.gameObject.GetComponent<Cle>() != null)
+            {
+                EventManager.TriggerEvent(EventManager.PossibleEvent.eChangerNbCle, collision.gameObject.GetComponent<Cle>().getCle());
+            }
         }
     }
 
-    public List<CollectionnableEnum> getType()
+    public List<CollectionnableEnum> getInventaire()
     {
         return _inventaire;
     }
