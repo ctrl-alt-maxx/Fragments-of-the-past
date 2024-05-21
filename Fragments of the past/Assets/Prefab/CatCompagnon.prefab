@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Target: {fileID: 0}
-  _ForceMouvement: 10
+  _ForceMouvement: 20
   _BeingChassed: 0
   _DistanceVision: 5
 --- !u!50 &3400931805788217277
