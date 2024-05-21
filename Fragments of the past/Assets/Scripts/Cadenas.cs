@@ -28,17 +28,17 @@ public class Cadenas : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            if (collision.gameObject.GetComponent<ControleJoueur>().getType().Contains(CollectionnableEnum.Cle1))
+            if (collision.gameObject.GetComponent<ControleJoueur>().getType().Contains(CollectionnableEnum.Cle_argent))
             {
                 isCle1 = true;
                 cadenaBronze.GetComponent<Animator>().SetBool("Unlocked", true);
             }
-            if (collision.gameObject.GetComponent<ControleJoueur>().getType().Contains(CollectionnableEnum.Cle2))
+            if (collision.gameObject.GetComponent<ControleJoueur>().getType().Contains(CollectionnableEnum.Cle_bronze))
             {
                 isCle2 = true;
                 cadenaGris.GetComponent<Animator>().SetBool("Unlocked", true);
             }
-            if (collision.gameObject.GetComponent<ControleJoueur>().getType().Contains(CollectionnableEnum.Cle3))
+            if (collision.gameObject.GetComponent<ControleJoueur>().getType().Contains(CollectionnableEnum.Cle_or))
             {
                 isCle3 = true;
                 cadenaOr.GetComponent<Animator>().SetBool("Unlocked", true);

@@ -139,11 +139,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joueur: {fileID: 0}
   _objet: 0
-  _texteBase: "Salut ! Je t'ai vu hier, aide-moi \xE0 retrouver mon **objet** que
-    j'ai perdu et je te dirai ce que je sais sur toi"
+  _texteBase: "Salut ! Je t'ai vu hier, aide-moi \xE0 retrouver mon chat que j'ai
+    perdu et je te dirai ce que je sais sur toi"
   _texteFound: "Merci !! Maladroite que je suis, hier aussi tu m'as aid\xE9 \xE0
-    retrouver mon **objet**. Tu cherchais des cl\xE9s pour ouvrir une porte menant
-    \xE0 un endroit qui \xE9tait tr\xE8s important pour toi."
+    retrouver mon chat. Tu cherchais des cl\xE9s pour ouvrir une porte menant \xE0
+    un endroit qui \xE9tait tr\xE8s important pour toi."
   _textObject: {fileID: 0}
   _offset: {x: -15, y: 200, z: 0}
 --- !u!61 &866801630496325379
