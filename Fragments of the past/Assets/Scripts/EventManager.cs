@@ -11,7 +11,7 @@ public class EventManager : MonoBehaviour
     public enum PossibleEvent
     {
         eAfficher = 0,
-
+        eLightFire = 1,
         //Nb éléments
         eMAX
     }
