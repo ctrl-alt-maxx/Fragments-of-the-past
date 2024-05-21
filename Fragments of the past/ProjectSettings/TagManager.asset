@@ -51,6 +51,9 @@ TagManager:
   - name: Trou
     uniqueID: 2233751049
     locked: 0
+  - name: Vapeur
+    uniqueID: 47797129
+    locked: 0
   - name: Terrestre
     uniqueID: 304210417
     locked: 0
