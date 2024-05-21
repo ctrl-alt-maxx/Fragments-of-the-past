@@ -38,7 +38,7 @@ public class npc1 : MonoBehaviour
 
 
     private bool _isOnScreen = false;
-    private bool _isFirstTime = false;
+    private bool _isFirstTime = true;
 
 
     // Start is called before the first frame update
@@ -59,15 +59,15 @@ public class npc1 : MonoBehaviour
             _textObject.transform.position = screenPosition + _offset;
             if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
             {
-                _joueur.GetComponent<ControleJoueur>()._inventaire.Remove(_objet);
                 if(_isFirstTime)
                 {
                     EventManager.TriggerEvent(EventManager.PossibleEvent.eAfficher, this.transform.position);
-                    _textNbCles.SetActive(true);
                 }
+                _joueur.GetComponent<ControleJoueur>()._inventaire.Remove(_objet);
                 _textObject.GetComponent<TextMeshProUGUI>().text = _texteFound;
                 _textObjectAction.GetComponent<TextMeshProUGUI>().text = _texteAction2;
-                _isFirstTime = true;
+                _isFirstTime = false;
+                _textNbCles.SetActive(true);
             }
             _textObjectAction.SetActive(true);
         }
