@@ -21,6 +21,8 @@ Change max size of a sprite to make it pixalized
 ## Ce qui manque (Max)
 - Motion Trail lampe torche[]
 - Fin (En appuyant sur q)
+- Update UI 
+- End Scene Change 
 
 ## Isidore
 - FONDU MENU PRINCIPAL
