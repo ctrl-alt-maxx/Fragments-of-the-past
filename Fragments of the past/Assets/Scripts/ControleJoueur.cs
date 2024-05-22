@@ -101,7 +101,15 @@ public class ControleJoueur : MonoBehaviour
 
     public void changerNiveau()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
+        
     }
 
     public void quitter()

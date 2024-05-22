@@ -32,6 +32,7 @@ public class Briquet : MonoBehaviour
         if(collision.gameObject.layer == 7 && _isActive)
         {
             EventManager.TriggerEvent(EventManager.PossibleEvent.eLightFire, gameObject.transform.position);
+            gameObject.GetComponentInParent<Animator>().SetBool("isFondue", true);
         }
     }
 }
