@@ -7,7 +7,8 @@ public enum CollectionnableEnum
     Chat_perdu,
     Cle_argent,
     Cle_bronze,
-    Cle_or
+    Cle_or,
+    Briquet
 }
 
 public class Collectionnable : MonoBehaviour

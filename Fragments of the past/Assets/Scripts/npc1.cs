@@ -31,10 +31,15 @@ public class npc1 : MonoBehaviour
     private GameObject _textObjectAction;
 
     [SerializeField]
+    private GameObject _textNbCles;
+
+    [SerializeField]
     private Vector3 _offset;
 
 
     private bool _isOnScreen = false;
+    private bool _isFirstTime = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,14 +55,24 @@ public class npc1 : MonoBehaviour
     {
         if(_isOnScreen)
         {
+            print(_isOnScreen);
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
             _textObject.transform.position = screenPosition + _offset;
             if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
             {
+                if(_isFirstTime)
+                {
+                    EventManager.TriggerEvent(EventManager.PossibleEvent.eAfficher, this.transform.position);
+                }
                 _joueur.GetComponent<ControleJoueur>()._inventaire.Remove(_objet);
-                EventManager.TriggerEvent(EventManager.PossibleEvent.eAfficher, this.transform.position);
                 _textObject.GetComponent<TextMeshProUGUI>().text = _texteFound;
                 _textObjectAction.GetComponent<TextMeshProUGUI>().text = _texteAction2;
+                _isFirstTime = false;
+                if(_textNbCles !=  null)
+                {
+                    _textNbCles.SetActive(true);
+                }
+                
             }
             _textObjectAction.SetActive(true);
         }
