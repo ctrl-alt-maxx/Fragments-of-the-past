@@ -527,8 +527,8 @@ MonoBehaviour:
   _joueur: {fileID: 476454932}
   _objet: 0
   _texteBase: "Mais... c'est toi? Comment as-tu fais pour... Bref je m'\xE9gare.
-    Il fait vraiment froid, pourrais-tu allumer sur le feu ? Je te raconterai tout
-    ce qu'il s'est pass\xE9."
+    Il fait vraiment froid, pourrais-tu allumer le feu ? Je te raconterai tout ce
+    qu'il s'est pass\xE9."
   _texteFound: 
   _texteAction: "Appuyer sur \"E\" pour allumer une flamme, puis allumer le feu de
     camp pour se r\xE9chauffer"
@@ -1184,6 +1184,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33dc15a6eefa4f4181465516816cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &476454947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16689154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 11237ff82c77a4e4b88390cd5ba209bd, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1001 &517908001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6494,7 +6511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosionVFX: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
-  _Target: {fileID: 555380658}
 --- !u!4 &555380658
 Transform:
   m_ObjectHideFlags: 0
@@ -58812,7 +58828,7 @@ GameObject:
   - component: {fileID: 864633656}
   - component: {fileID: 864633655}
   - component: {fileID: 864633654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -62488,7 +62504,7 @@ GameObject:
   - component: {fileID: 1658332985}
   - component: {fileID: 1658332988}
   - component: {fileID: 1658332987}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UnlitCampFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62608,7 +62624,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.02048382, y: -0.051209517}
   serializedVersion: 2
-  m_Radius: 0.61266124
+  m_Radius: 0.58
 --- !u!1 &1694121283
 GameObject:
   m_ObjectHideFlags: 0
@@ -62800,6 +62816,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1989151576878395711, guid: 22664361a3a205f40a4b488625799754, type: 3}
       insertIndex: -1
       addedObject: {fileID: 476454939}
+    - targetCorrespondingSourceObject: {fileID: 1989151576878395711, guid: 22664361a3a205f40a4b488625799754, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 476454947}
   m_SourcePrefab: {fileID: 100100000, guid: 22664361a3a205f40a4b488625799754, type: 3}
 --- !u!1001 &1756455346
 PrefabInstance:
@@ -62967,6 +62986,14 @@ PrefabInstance:
       propertyPath: _joueur
       value: 
       objectReference: {fileID: 476454941}
+    - target: {fileID: 7731279219051452675, guid: 3f6fbd807b4eb484fa27d59d1cbf15a2, type: 3}
+      propertyPath: m_margin.y
+      value: -311.57953
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731279219051452675, guid: 3f6fbd807b4eb484fa27d59d1cbf15a2, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

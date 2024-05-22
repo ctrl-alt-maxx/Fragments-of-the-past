@@ -8,8 +8,6 @@ public class ExplosionTrigger : MonoBehaviour
 
     [SerializeField]
     private GameObject _explosionVFX;
-    [SerializeField]
-    private Transform _Target;
 
     private UnityAction<object> _ExplosionTrigger;
 
@@ -26,9 +24,9 @@ public class ExplosionTrigger : MonoBehaviour
         
     }
 
-    private void Explode(object i)
+    private void Explode(object source)
     {
-        Instantiate(_explosionVFX, _Target.position, Quaternion.identity);
+        Instantiate(_explosionVFX, (Vector3)source, Quaternion.identity);
     }
 
 }

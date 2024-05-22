@@ -24,15 +24,14 @@ public class DebrisExplode : MonoBehaviour
         
     }
 
-    private void ExplodeDebris(object i)
+    private void ExplodeDebris(object source)
     {
         foreach (Rigidbody2D debri in gameObject.GetComponentsInChildren<Rigidbody2D>())
         {
 
-            debri.bodyType = RigidbodyType2D.Dynamic;
-            Vector2 forceDirection = (debri.gameObject.transform.up).normalized; // get direction of launch
+            Vector2 direction = gameObject.transform.position - (Vector3)source;
 
-            debri.AddForce(forceDirection * _ForcePropulsion, ForceMode2D.Impulse); // propel the walls
+            debri.AddForce(direction.normalized * _ForcePropulsion, ForceMode2D.Impulse); 
 
         }
     }

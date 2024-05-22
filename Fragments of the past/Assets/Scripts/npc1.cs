@@ -103,6 +103,7 @@ public class npc1 : MonoBehaviour
 
     private void PeurDuFeu(object source)
     {
-        _texteBase = (string)source;
+        _textObject.GetComponent<TextMeshProUGUI>().text=source.ToString();
+
     }
 }

@@ -18,6 +18,6 @@ public class LightFire : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        EventManager.TriggerEvent(EventManager.PossibleEvent.eLightFire, null);
+        
     }
 }

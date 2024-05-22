@@ -18,7 +18,6 @@ public class Briquet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetKeyDown(KeyCode.E));
         if(Input.GetKeyDown(KeyCode.E))
         {
             _isActive = !_isActive;
@@ -26,5 +25,13 @@ public class Briquet : MonoBehaviour
         }
 
         _flame.SetActive(_isActive);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 7 && _isActive)
+        {
+            EventManager.TriggerEvent(EventManager.PossibleEvent.eLightFire, gameObject.transform.position);
+        }
     }
 }
