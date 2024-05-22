@@ -59203,6 +59203,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Joueur
       objectReference: {fileID: 0}
+    - target: {fileID: 6681816235145502982, guid: 22664361a3a205f40a4b488625799754, type: 3}
+      propertyPath: _inventaire.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681816235145502982, guid: 22664361a3a205f40a4b488625799754, type: 3}
+      propertyPath: _inventaire.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7033791204638002127, guid: 22664361a3a205f40a4b488625799754, type: 3}
       propertyPath: m_RootOrder
       value: 1
