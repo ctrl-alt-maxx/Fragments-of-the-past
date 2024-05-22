@@ -48,7 +48,11 @@ public class ControleJoueur : MonoBehaviour
         }
         float vitesse = Rigidbody.velocity.magnitude;
         AnimatorJoueur.SetFloat("vitesse", vitesse);
- 
+
+        if (Input.GetKeyDown("q"))
+        {
+            SceneManager.LoadScene(4);
+        }
     }
 
     private void FixedUpdate()
@@ -98,6 +102,17 @@ public class ControleJoueur : MonoBehaviour
     public void changerNiveau()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void quitter()
+    {
+        Application.Quit();
+    }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene(0);
+        StopAllCoroutines();
     }
 
 }
