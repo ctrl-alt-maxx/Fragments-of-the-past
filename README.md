@@ -1,4 +1,4 @@
-#Projet Final Jeux Video: Fragments-of-the-past
+# Projet Final Jeux Video: Fragments-of-the-past
 
 ## Nos défis
 defi 1 : Personnage a perdu un item important. Il faut le trouver et lui apporter :pour défi 1 et 2, besoin de plusieurs faux chemins, racoins, cul-de-sac, etc
