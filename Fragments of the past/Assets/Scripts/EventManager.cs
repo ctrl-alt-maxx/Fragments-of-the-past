@@ -12,6 +12,7 @@ public class EventManager : MonoBehaviour
     {
         eAfficher = 0,
         eLightFire = 1,
+        eChangerNbCle = 2,
         //Nb éléments
         eMAX
     }
