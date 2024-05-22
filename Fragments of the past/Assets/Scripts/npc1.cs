@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class npc1 : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class npc1 : MonoBehaviour
 
     private bool _isOnScreen = false;
     private bool _isFirstTime = true;
+    private UnityAction<object> _action;
 
 
     // Start is called before the first frame update
@@ -48,6 +50,9 @@ public class npc1 : MonoBehaviour
         _textObject.SetActive(false);
         _textObjectAction.GetComponent<TextMeshProUGUI>().text = _texteAction;
         _textObjectAction.SetActive(false);
+
+        _action += PeurDuFeu;
+        EventManager.StartListening(EventManager.PossibleEvent.eChangerTxtFeu, _action);
     }
 
     // Update is called once per frame
@@ -55,7 +60,6 @@ public class npc1 : MonoBehaviour
     {
         if(_isOnScreen)
         {
-            print(_isOnScreen);
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
             _textObject.transform.position = screenPosition + _offset;
             if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
@@ -95,5 +99,10 @@ public class npc1 : MonoBehaviour
         {
             _isOnScreen= false;
         }
+    }
+
+    private void PeurDuFeu(object source)
+    {
+        _texteBase = (string)source;
     }
 }

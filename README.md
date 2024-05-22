@@ -8,8 +8,7 @@ defi 4 : Personnage a froid. Il sait exactement ce qu'il s'est passé avec nous.
 
 ## Isidore
 - FONDU MENU PRINCIPAL
-- note: lighter icon in assets (Nature 2D Graphics)
 - coroutines particules menu principal
-- 2 Event qui se passe quand tu pick up key 3 Chat NPC 
-- 1 rough 2 bounce pluie (Matériels physique)
+- event 3 Chat NPC 
+- 2 bounce pluie (Matériels physique)
 
