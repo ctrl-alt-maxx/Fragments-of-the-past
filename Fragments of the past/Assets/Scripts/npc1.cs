@@ -55,6 +55,7 @@ public class npc1 : MonoBehaviour
     {
         if(_isOnScreen)
         {
+            print(_isOnScreen);
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
             _textObject.transform.position = screenPosition + _offset;
             if (_joueur.GetComponent<ControleJoueur>()._inventaire.Contains(_objet))
@@ -67,7 +68,11 @@ public class npc1 : MonoBehaviour
                 _textObject.GetComponent<TextMeshProUGUI>().text = _texteFound;
                 _textObjectAction.GetComponent<TextMeshProUGUI>().text = _texteAction2;
                 _isFirstTime = false;
-                _textNbCles.SetActive(true);
+                if(_textNbCles !=  null)
+                {
+                    _textNbCles.SetActive(true);
+                }
+                
             }
             _textObjectAction.SetActive(true);
         }
